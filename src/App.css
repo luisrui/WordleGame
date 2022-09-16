@@ -1,0 +1,121 @@
+body {
+  color: black;
+}
+
+.App {
+  text-align: center;
+}
+
+.Container {
+  background-color: aquamarine;
+  background-size: 100%, 100%;
+
+}
+
+.gridRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px;
+}
+
+.letter {
+  min-width: 40px;
+  min-height: 30px;
+  margin: 0;
+  border: 2px;
+  position: relative;
+  margin: 15px 15px 0 0;
+
+}
+
+.letter>.front,
+.letter>.back {
+  display: flex;
+  min-width: inherit;
+  min-height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 800;
+  backface-visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  transition: transform 2000ms;
+  border-radius: 5px;
+}
+
+.letter:nth-child(2)>.front,
+.letter:nth-child(2)>.back {
+  transition-delay: 0.5s;
+}
+
+.letter:nth-child(3)>.front,
+.letter:nth-child(3)>.back {
+  transition-delay: 1s;
+}
+
+.letter:nth-child(4)>.front,
+.letter:nth-child(4)>.back {
+  transition-delay: 1.5s;
+}
+
+.letter:nth-child(5)>.front,
+.letter:nth-child(5)>.back {
+  transition-delay: 2s;
+}
+
+.letter>.front {
+  background-color: white;
+}
+
+/* .letter>.back {
+  background-color: red;
+} */
+
+.letter.green>.back {
+  background-color: green;
+}
+
+.letter.yellow>.back {
+  background-color: yellow;
+}
+
+.letter.grey>.back {
+  background-color: grey;
+}
+
+.letter>.back {
+  transform: perspective(200px) rotateX(180deg);
+}
+
+.letter>.front {
+  transform: perspective(200px) rotateX(0deg);
+}
+
+.letter.a>.front {
+  transform: perspective(200px) rotateX(180deg);
+}
+
+.letter.a>.back {
+  transform: perspective(200px) rotateX(360deg);
+}
+
+.butRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.butRow>.but {
+  display: block;
+  text-transform: uppercase;
+  color: black;
+  background-color: transparent;
+  font-size: 2em;
+  min-width: 30px;
+  min-height: 20px;
+  transition: all 200ms ease-out;
+}
